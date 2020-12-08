@@ -2,11 +2,11 @@
 
 
 <p align="center">
-    <a href="https://snakegame.github.io/" target="_blank"><img alt="CSI logo" title="CSI" src="https://img.collegedekhocdn.com/media/img/institute/logo/Bhilai-Institute-Of-Technology_logo_BITLOGO.jpg" width="150"></a>
+    <a href="https://snakegame.github.io/" target="_blank"><img alt="BIT logo" title="CSI" src="https://img.collegedekhocdn.com/media/img/institute/logo/Bhilai-Institute-Of-Technology_logo_BITLOGO.jpg" width="150"></a>
 </p>
 
-<h1 align="center">CSI GITAM Student Branch</h1>
-<p align="center">Official Website for CSI, GITAM Student Branch, designed and maintained by students.</p>
+<h1 align="center">Technohub</h1>
+<p align="center">Official Website of BIT , Technohub, designed and maintained by students.</p>
 
 
 ### Install dependencies
