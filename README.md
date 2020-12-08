@@ -1,12 +1,12 @@
 ## snakegame
 
- <img src="https://img.shields.io/npm/v/snakegame.svg?orange=blue" /> <img src="https://img.shields.io/badge/Front--end-React.js-orange" />
+ <img src="https://img.shields.io/npm/v/snakegame.svg?orange=blue" /> <img src="https://img.shields.io/badge/Front--end-React.js-orange" /> ![GitHub language count](https://img.shields.io/github/languages/count/NarayanBavisetti/club-website?style=plastic)
 
 
 
 
-![GitHub language count](https://img.shields.io/github/languages/count/NarayanBavisetti/club-website?style=plastic)
-![GitHub language count](https://img.shields.io/github/languages/count/NarayanBavisetti/club-website?style=plastic)
+
+
 
 <p align="center">
     <a href="https://snakegame.github.io/" target="_blank"><img alt="Technohub logo" title="CSI" src="https://img.collegedekhocdn.com/media/img/institute/logo/Bhilai-Institute-Of-Technology_logo_BITLOGO.jpg" width="150"></a>
