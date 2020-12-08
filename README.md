@@ -1,5 +1,7 @@
 ## snakegame
 
+ <img src="https://img.shields.io/npm/v/snakegame.svg?orange=blue" />
+
 
 <p align="center">
     <a href="https://snakegame.github.io/" target="_blank"><img alt="Technohub logo" title="CSI" src="https://img.collegedekhocdn.com/media/img/institute/logo/Bhilai-Institute-Of-Technology_logo_BITLOGO.jpg" width="150"></a>
@@ -20,7 +22,7 @@ npm start
 ```
 Build and open your browser to http://localhost:3000.
 
-  <img src="https://img.shields.io/npm/v/snakegame.svg?orange=blue" />
+ 
 
 
 ![IMG_20201208_134042](https://user-images.githubusercontent.com/72156168/101497799-5db33980-3991-11eb-9b9f-fa326bc17ba8.jpg)
