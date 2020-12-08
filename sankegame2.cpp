@@ -143,11 +143,11 @@ void board()
                 cout << " ";
             }
         }
-        cout << "#" << endl;
+        cout << "," << endl;
     }
 }
 bool Snake::collided(){
-    if(pos.X <1 || pos.X >width){
+    if(pos.X < 1 || pos.X >width){
         return true;
     }
     else {
