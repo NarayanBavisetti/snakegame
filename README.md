@@ -20,7 +20,7 @@ npx readme-md-generator -y
 
 Use your own `ejs` README template (`-p`):
 
-```sh
+```
 npx readme-md-generator -p path/to/my/own/template.md
 ```
 
