@@ -1,5 +1,18 @@
 ## snakegame
 
+
+
+### Install dependencies
+```
+npm install
+```
+### Run the app in the development mode
+
+```
+npm start
+```
+Build and open your browser to http://localhost:3000.
+
   <img src="https://img.shields.io/npm/v/snakegame.svg?orange=blue" />
 
 
