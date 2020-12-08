@@ -1,6 +1,13 @@
 ## snakegame
 
 
+<p align="center">
+    <a href="https://snakegame.github.io/" target="_blank"><img alt="CSI logo" title="CSI" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D300811987533355&imgrefurl=https%3A%2F%2Fwww.facebook.com%2Fpages%2Fcategory%2FCampus-Building%2FBIT-DURG-300811987533355%2F&tbnid=QX7sdMtm9CWTSM&vet=12ahUKEwjHwszM3r7tAhXAkUsFHcOVB58QMygCegUIARCnAQ..i&docid=n0gU9LZ2dUNJiM&w=960&h=960&q=logo%20bit%20durg&hl=en&ved=2ahUKEwjHwszM3r7tAhXAkUsFHcOVB58QMygCegUIARCnAQ" width="150"></a>
+</p>
+
+<h1 align="center">CSI GITAM Student Branch</h1>
+<p align="center">Official Website for CSI, GITAM Student Branch, designed and maintained by students.</p>
+
 
 ### Install dependencies
 ```
