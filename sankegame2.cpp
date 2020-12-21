@@ -1,11 +1,12 @@
 #include <iostream>
 #include <cstdlib>
 #include<ctime>
+#include<process.h>
 //all to control the position of the cursor
 #include <windows.h>
 #include <conio.h>
-#define width 50
-#define height 30
+#define width 70
+#define height 40
 
 using namespace std;
 
@@ -26,6 +27,8 @@ Food::Food()
 {
     gen_food();
 }
+
+
 void Food::gen_food()
 {
     //formula for generating rNDOM NO BTW U and L
@@ -40,7 +43,7 @@ COORD Food::get_pos()
 }
 
 class Snake
-{
+{   
 private:
     COORD pos;
     int len;
@@ -57,6 +60,7 @@ public:
     void grow();
     bool collided();
 };
+
 void Snake::grow()
 {
     len++;
@@ -113,6 +117,8 @@ COORD Snake::get_pos()
 //these are macros
 
 Snake snake({width / 2, height / 2}, 1);
+
+
 Food food;
 
 void board()
@@ -146,6 +152,8 @@ void board()
         cout << "#" << endl;
     }
 }
+
+
 bool Snake::collided(){
     if(pos.X <1 || pos.X >width){
         return true;
@@ -157,7 +165,7 @@ bool Snake::collided(){
 
 int main()
 {//generating random food
-    stand(time(NULL));
+    // stand(time(NULL));
     // board();
     bool game_over = false;
     while (!game_over)
@@ -180,6 +188,8 @@ int main()
             case 'd':
                 snake.change_dir('r');
                 break;
+                case'x':
+                exit(0);
             }
         }
         snake.move_snake();
@@ -191,6 +201,7 @@ int main()
         }
         if(snake.collided()){
             game_over = true;
+            exit(0);
         }
         SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {0, 0});
     }
