@@ -1,5 +1,5 @@
-## snakegame
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <img scr=" https://img.shields.io/badge/npm-%3E6.14.6-green " />
 =======
@@ -57,3 +57,5 @@ npx readme-md-generator -p path/to/my/own/template.md
 
 ## added an image and text
 
+=======
+>>>>>>> 79b31b609ccbf28f98322f7f6e6b8d853c3c32fa
