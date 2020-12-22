@@ -7,8 +7,9 @@
 #include <conio.h>
 #include <stdlib.h>
 #include <vector>
+#include<fstream>
 #define width 60
-#define height 35
+#define height 30
 
 using namespace std;
 
@@ -51,7 +52,7 @@ private:
     vector<COORD> body;
 
 public:
-    // vector<COORD> body;
+    //vector<COORD> body;
     Snake(COORD pos, int vel); //constructor
     void change_dir(char dir);
     void move_snake();
@@ -60,6 +61,7 @@ public:
     bool eaten(COORD food_pos);
     void grow();
     bool collided();
+    //bool collided1();
 };
 
 void Snake::grow()
@@ -122,7 +124,7 @@ COORD Snake::get_pos()
     return pos;
 }
 
-vector<COORD> Snake ::get_body()
+vector<COORD> Snake::get_body()
 {
     return body;
 }
@@ -140,10 +142,11 @@ void board()
     COORD food_pos = food.get_pos();
 
     vector<COORD> snake_body = snake.get_body();
-
+    cout<<"\n\n";
     for (int i = 0; i < height; i++)
     {
-        cout << "#";
+         
+        cout << "\t\t#";
         for (int j = 0; j < width; j++)
         {
             if (i == 0 || i == height - 1)
@@ -182,54 +185,85 @@ void board()
 
 bool Snake::collided()
 {
+    //vector<COORD> sn_body = snake.get_body();
     if (pos.X < 1 || pos.X > width || pos.Y < 1 || pos.Y > height)
     {
         return true;
     }
-    else
+    /*for(int i=0;i>len-1;i++)
     {
-        return false;
-    }
+        if( pos.X==sn_body[i].X && pos.Y==sn_body[i].Y)
+        {
+            return true;
+        }
+    }*/
+    return false;
 }
+/*bool Snake::collided1()
+{
+    for(int i=0;i>len-1;i++)
+    {
+        if( pos.X==body[i].X && pos.Y==body[i].Y)
+        {
+            return true;
+        }
+    }
+    return false;
+}*/
 
 void starting()
 {
-  
+    system("cls");
     string var =" \n\n\n\n\n\n\n\n\t\t\t\t Welcome to Snake Game";
-
-
     for (int i = 0; i < 35; i++)
     {
-
         cout << var[i];
         Sleep(200);
     }
 }
 
-void Name()
+void Name(char name[])
 {
-    string m;
-    string var = "\n\n\n\n\n\n\n\n\t\t\t\t Please Enter Your Name";
-
-
+    string var = "\n\n\n\n\n\n\n\n\t\t\t\t Please Enter Your Name:";
     for (int i = 0; i < 36; i++)
     {
-
         cout << var[i];
         Sleep(20);
     }
-    cout<<endl;
-    cin>>m;
+    gets(name);
+}
+
+void updatescore(char name[],int score)
+{
+    ofstream fout("score.txt",ios::app);
+    fout<<"\n"<<name<<"\t"<<score;
+    system("cls");
+    cout<<"Your Score :"<<score;
+}
+void highscore()
+{
+    char ch;
+    ifstream fin;
+    fin.open("score.txt",ios::in);
+    
+    while(fin)
+    {
+        fin.get(ch);
+        cout<<ch;
+    }
+    cout<<"\npress any key to continue...";
+    getch();
 }
 int main()
 { //generating random food
     srand(time(NULL));
     system("color A0");
+    char name[30];
     starting();
     system("cls");
-    Name();
+    Name(name);
     // board();
-    int c = 1;
+    int c = 1,score=0;
     bool game_over = false;
     while (!game_over)
     {
@@ -251,8 +285,13 @@ int main()
             case 'd':
                 snake.change_dir('r');
                 break;
-            case 'x':
+            case 'x': updatescore(name,score);
+                highscore();
                 exit(0);
+                break;
+            case 'p': getch();
+                break;
+                
             }
         }
         snake.move_snake();
@@ -261,11 +300,15 @@ int main()
         {
             food.gen_food();
             snake.grow();
+            score+=10;
         }
         if (snake.collided())
         {
+            updatescore(name,score);
+            highscore();
             exit(0); //game_over = true;
         }
+        cout<<"score:"<<score;
         SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {0, 0});
         if (c == 1)
         {
